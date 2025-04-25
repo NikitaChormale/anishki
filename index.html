@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Happy Birthday ❤️</title>
+  <style>
+    body {
+      margin: 0;
+      background: linear-gradient(to bottom, #a3d0e4, #7eacbb, #a2c2cf);
+      overflow: hidden;
+      font-family: 'Segoe UI', sans-serif;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+    }
+
+    .timer {
+      font-size: 1.3em;
+      margin: 10px 0;
+    }
+
+    .heart {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background-color: rgb(221, 28, 60);
+      transform: rotate(45deg);
+      animation: floatUp 5s linear infinite;
+    }
+
+    .heart::before, .heart::after {
+      content: '';
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background-color: rgb(221, 52, 80);
+      border-radius: 50%;
+    }
+
+    .heart::before {
+      top: -5px;
+      left: 0;
+    }
+
+    .heart::after {
+      left: -5px;
+      top: 0;
+    }
+
+    @keyframes floatUp {
+      0% {
+        transform: translateY(100vh) scale(1) rotate(45deg);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-10vh) scale(1.5) rotate(45deg);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🎉 The world just got luckier since...</h1>
+  <H2>Happy Birthday AKASH...🍰✨</H2>
+ 
+  <h2><p>वाढदिवसाच्या खूप खूप शुभेच्छा Akash....❤️!🎂🎉  
+    तुम्ही नेहमी हसत रहा, यशस्वी हो, आणि तुमचं आयुष्य प्रेमाने व आनंदाने भरलेलं असो.💫  
+    आजचा दिवस तुझ्यासाठी खास असो — धमाल, मजा आणि केक भरपूर खा MALA SODUN ! 🍰😄</br>
+    Once Again wish you many many Happy returns of the day! 🥳🍰✨<br>
+     💖</p>
+    </h2>
+    <div class="timer" id="timer">Loading...</div>
+  <p>Happy Birthday to someone truly special 🌟💖</p>
+
+
+  <p>
+    <a href="./birthday.html" target="_blank">Birthday Playlist 🎶</a>
+  </p>
+
+  <script>
+    const birthdayDate = new Date("2025-04-27T00:00:00"); // change this to your crush's birthdate
+    const timerEl = document.getElementById('timer');
+
+     // heart particles
+     function createHeart() {
+      const heart = document.createElement('div');
+      heart.classList.add('heart');
+      heart.style.left = Math.random() * 100 + "vw";
+      heart.style.animationDuration = 3 + Math.random() * 2 + "s";
+      document.body.appendChild(heart);
+      setTimeout(() => heart.remove(), 5000);
+    }
+    setInterval(createHeart, 150);
+    
+
+  
+  </script>
+
+</body>
+</html>
